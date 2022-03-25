@@ -1,37 +1,35 @@
-let layer1 = document.getElementById("layer1")
+var layer1 = document.getElementById("layer1");
 scroll = window.pageYOffset;
 document.addEventListener("scroll", function (e) {
-    let offset = window.pageXOffset;
-
-    scroll = offset;
-    layer1.style.width = (100 + scroll / 5) + "%";
+  var offset = window.pageYOffset;
+  scroll = offset;
+  layer1.style.width = 100 + scroll / 5 + "%";
 });
 
-let layer2 = document.getElementById("layer2")
+var layer2 = document.getElementById("layer2");
 scroll = window.pageYOffset;
 document.addEventListener("scroll", function (e) {
-    let offset = window.pageXOffset;
-
-    scroll = offset;
-    layer2.style.width = scroll / 50 + "%"
+  var offset = window.pageYOffset;
+  scroll = offset;
+  layer2.style.width = 100 + scroll / 5 + "%";
+  layer2.style.left = scroll / 50 + "%";
 });
 
-
-
-let layer1 = document.getElementById("layer1")
+var text = document.getElementById("text");
 scroll = window.pageYOffset;
 document.addEventListener("scroll", function (e) {
-    let offset = window.pageXOffset;
-
-    scroll = offset;
-    layer1.style.width = (100 + scroll / 5) + "%";
+  var offset = window.pageYOffset;
+  scroll = offset;
+  text.style.width = 100 + scroll / 5 + "%";
+  text.style.top = -scroll / 5 + "%";
 });
 
-let text = document.getElementById("text")
+var skier = document.getElementById("skier");
 scroll = window.pageYOffset;
 document.addEventListener("scroll", function (e) {
-    let offset = window.pageXOffset;
-
-    scroll = offset;
-    text.style.top = -scroll / 20 + "%"
+  var offset = window.pageYOffset;
+  scroll = offset;
+  skier.style.width = 100 + scroll / 5 + "%";
+  skier.style.top = -scroll / 5 + "%";
+  skier.style.left = -scroll / 20 + "%";
 });

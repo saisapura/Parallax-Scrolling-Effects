@@ -1,88 +1,98 @@
-
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Mono:wght@200&display=swap");
 body {
-    margin: 0;
-    padding: 0;
-   
+  margin: 0;
+  padding: 0;
 }
 
 .zoom {
-    width: 100%;
-    height: 1000px;
-    position: relative;
-    overflow: hidden;
-    background: url(background.jpeg);
-    background-size: cover;
+  max-width: 100%;
+  height: 1000px;
+  position: relative;
+  overflow: hidden;
+  background: url(background.jpeg);
+  background-size: cover;
 }
 
-.zoom::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 200px;
-    z-index: 1000;
-    background:linear-gradient(transparent, #fff)
-
+.zoom:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  height: 200px;
+  z-index: 1000;
+  background: linear-gradient(transparent, #fff);
 }
 
 .zoom #layer1 {
-    position: absolute;
-    left: 40%;
-    width: 100%;
-    transform: translateX(-50%);
-    z-index: 10;
-
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  object-fit: cover;
 }
 
 .zoom #layer2 {
-    position: absolute;
-    left: 40%;
-    right: 0;
-    width: 100%;
-    transform: translateX(-50%);
-    z-index: 9;
-
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  object-fit: cover;
 }
 
 .zoom #text {
-    position: absolute;
-    right: 0;
-    width: 100%;
-    transform: translateY(50%);
-
+  position: absolute;
+  right: 50%;
+  max-width: 200%;
+  transform: translateX(50%);
 }
-/* 
+
 .zoom #skier {
-
-} */
-
+  position: absolute;
+  max-width: 100%;
+  transform: translate(281px, 771px);
+  object-fit: cover;
+}
 .content {
-    padding: 100px;
-    box-sizing: border-box;
-    font-family: 'Heebo', sans-serif;
-    
-    
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: inherit;
 }
 
 .content h2 {
-    margin: 0;
-    padding: 0;
-    font-size: 4em;
-
+  margin: 0;
+  padding: 0;
+  font-size: 4em;
+  text-align: center;
 }
 
 .content p {
-    line-height:1.5em;
-    font-size: 1.5em;
-    font-family: 'Heebo', sans-serif;
-    font-weight:100;
-    text-align: justify;
-
+  line-height: 1.5em;
+  font-size: 1.5em;
+  font-family: inherit;
+  font-weight: 100;
+  text-align: justify;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .content h3 {
-    margin: 0;
-    padding: 0;
-    font-size: 2em;
+  margin: 0;
+  padding: 0;
+  font-size: 2em;
+  text-align: center;
+}
 
+@media screen and (max-width: 600px) {
+  .content p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  img#skier {
+    display: none;
+  }
 }
